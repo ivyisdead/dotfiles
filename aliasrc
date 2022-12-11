@@ -1,0 +1,81 @@
+#!/bin/sh
+# Installation aliases
+alias xi="doas pacman -S"
+alias xr="doas pacman -Runs"
+alias xx="doas pacman"
+alias xU="doas pacman -ySu"
+
+# power aliases
+alias pow="sudo poweroff"
+alias reb="reboot"
+alias asdf="startx"
+
+# file aliases
+alias ls="ls --color"
+alias ls-="ls"
+alias la="ls -A --color"
+alias ll="ls -lA -h --color"
+alias wl="ls -A --color | wc -l"
+alias ..="cd .."
+alias lb="cd ~/.local/bin"
+
+# LaTeX aliases
+alias tx="cp $HOME/dox/etc/latex/doc/sample.tex"
+alias xl="xelatex"
+alias pl="pdflatex"
+alias pkg="nvim $HOME/dox/etc/pkg"
+alias texclean="rm *.aux *.fdb_latexmk *.fls *.log *.synctex.gz"
+
+# Programs
+alias clock="tty-clock -S -s -c -C 6"
+alias SM="mw -Y;neomutt"
+alias v="nvim"
+alias z="setsid zathura"
+alias m="mpv"
+alias am="alsamixer"
+alias pm="pulsemixer"
+alias km="kmix"
+alias zzz="doas zzz"
+alias moc="mocp -O MOCDir=\"~/.config\"/moc"
+alias cc="calcurse"
+
+# conveniency aliases
+alias mus="cd $HOME/dox/media/mus/"
+alias pod="cd $HOME/dox/media/podcasts/"
+alias vids="cd $HOME/dox/media/videos/"
+alias yt="cd $HOME/dox/media/vids/yt"
+alias sch="cd $HOME/dox/study/22-23/"
+alias www="cd $HOME/dox/www/"
+alias s="setsid -f"
+alias xreload="xrdb ~/.config/.Xresources"
+alias pv="pipe-viewer --resolution 480"
+alias zal="nvim $HOME/.config/zsh/aliasrc"
+
+# make
+alias mci="doas make clean install"
+alias mi="doas make install"
+
+# external hdd
+alias ele="sudo mkdir /run/media/$USER/ /run/media/$USER/Elements && sudo mount /dev/sdb1 /run/media/$USER/Elements && cd /run/media/$USER/Elements"
+alias cdE="cd /run/media/$USER/Elements"
+
+# anti-retarded alias
+alias cal="cal -m"
+
+# school
+alias schi="cd /home/ivy/dox/study/22-23/chim"
+alias sted="cd /home/ivy/dox/study/22-23/deu"
+alias secd="cd /home/ivy/dox/study/22-23/ecd"
+alias sfis="cd /home/ivy/dox/study/22-23/fis"
+alias sing="cd /home/ivy/dox/study/22-23/ing"
+alias sinf="cd /home/ivy/dox/study/22-23/inf"
+alias sita="cd /home/ivy/dox/study/22-23/ita"
+alias smat="cd /home/ivy/dox/study/22-23/mat"
+alias smus="cd /home/ivy/dox/study/22-23/mus"
+alias ssar="cd /home/ivy/dox/study/22-23/sto-art"
+alias ssto="cd /home/ivy/dox/study/22-23/sto"
+#alias smus="cd /home/ivy/dox/study/22-23/mus"
+#alias ssre="cd /home/ivy/dox/study/22-23/sre"
+#alias sgeo="cd /home/ivy/dox/study/22-23/geo"
+#alias slat="cd /home/ivy/dox/study/22-23/lat"
+#alias ssci="cd /home/ivy/dox/study/22-23/sci"

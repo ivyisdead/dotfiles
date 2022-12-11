@@ -1,0 +1,36 @@
+# magentanwhite theme by yyz
+# works good on a light term
+
+#property		fg	bg	fx
+background =		default	default
+frame =			white	default
+window_title =		white	default
+directory =		magenta	default
+selected_directory =	white	default	bold
+playlist =		blue	default
+selected_playlist =	white	default	bold
+file =			magenta	default
+selected_file =		white	default	bold
+marked_file =		magenta	default	underline
+marked_selected_file = white    default	bold
+info =			magenta	default
+status =		white	default
+title =			magenta	default
+state =			white	default
+current_time =		white	default
+time_left =		white	default
+total_time =		white	default
+time_total_frames =	white	default
+sound_parameters =	white	default
+legend =		white	default
+disabled =		black	default
+enabled =		white	default
+empty_mixer_bar =	white	default
+filled_mixer_bar =	white	magenta
+empty_time_bar =	white	default
+filled_time_bar =	white	magenta
+entry =			white	default
+entry_title =		magenta	default
+error =			magenta	default
+message =		white	default
+plist_time =		white	default
