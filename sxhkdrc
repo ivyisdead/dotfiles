@@ -3,11 +3,11 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 super + shift + b
-	librewolf
+	firefox
 
 super + b
 	d-web
-
+	
 super + g
 	d-char
 
@@ -15,7 +15,7 @@ super + c
 	d-conf
 
 super + p
-	passmenu
+	passmenu -l 4
 
 super + n
 	st -e /usr/bin/ranger
@@ -23,16 +23,16 @@ super + n
 super + shift + n
 	nemo
 
-super + a
-	st -e SM.sh
+#super + a
+#	st -e SM.sh
 
-super + shift + a
-	d-email
+#super + shift + a
+	#d-email
 
 super + shift + s
 	flameshot gui
 
-super + m
-	st mocp -O MOCDir=\~\/.config\/moc
+#super + m
+	#st mocp -O MOCDir=\~\/.config\/moc
 
 # super + e

@@ -3,11 +3,8 @@ call plug#begin('$HOME/.config/nvim/plugins')
 " List of plugins
 Plug 'lervag/vimtex'
 Plug 'gruvbox-community/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
 Plug 'preservim/nerdtree'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 let g:vimtex_view_method='zathura'
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode=0
@@ -37,12 +34,13 @@ nnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 "html tags
 autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
 autocmd FileType html inoremap ;b <strong></strong><Space><++><Esc>FsT>i
-autocmd FileType html inoremap ;p <p></p><Enter><Enter><++><Esc>2ki
-autocmd FileType html inoremap ;h1 <h1></h1><Enter><Enter><++><Esc>2kli
-autocmd FileType html inoremap ;h2 <h2></h2><Enter><Enter><++><Esc>2kli
-autocmd FileType html inoremap ;h3 <h3></h3><Enter><Enter><++><Esc>2kli
+autocmd FileType html inoremap ;p <p></p><Enter><++><Esc>2ki
+autocmd FileType html inoremap ;h1 <h1></h1><Enter><++><Esc>2kli
+autocmd FileType html inoremap ;h2 <h2></h2><Enter><++><Esc>2kli
+autocmd FileType html inoremap ;h3 <h3></h3><Enter><++><Esc>2kli
 
 autocmd FileType tex inoremap ;i \emph{}<Space><++><Esc>F{a
+autocmd FileType tex inoremap ;it \item{}<Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;b \textbf{}<Space><++><Esc>F{a
 autocmd FileType tex inoremap ;u \underline{}<Space><++><Esc>F{a
 autocmd FileType tex inoremap ;h1 \section{}<Enter><Enter><++><Esc>?{<Enter>a
@@ -62,9 +60,7 @@ map <C-l> <C-w>l
 ":options for help
 
 " Other stuff
-"colorscheme gruvbox
-colorscheme catppuccin_macchiato
-" colorscheme nord
+colorscheme gruvbox
 
 " wtf
 "let g:vimtex_compiler_latexmk = { 
