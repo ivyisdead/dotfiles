@@ -9,7 +9,7 @@ if [[ $(whoami) == "root" ]]; then
 	PS1="%B%{$fg[red]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%M %{$fg[white]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 else
 	#PS1="%B%{$fg[magenta]%}[%{$fg[magenta]%}%n%{$fg[white]%}@%{$fg[magenta]%}%M %{$fg[white]%}%~%{$fg[magenta]%}]%{$reset_color%}$%b "
-	PS1="%B%{$fg[magenta]%}%{$fg[magenta]%}%n %{$fg[white]%}%~ %{$fg[magenta]%}>%b "
+	PS1="%B%{$fg[blue]%}%n %{$fg[red]%}%~ %{$fg[white]%}>%b "
 fi
 
 # Put history in ~/.cache/ dir
