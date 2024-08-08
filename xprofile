@@ -1,0 +1,11 @@
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+
+xwallpaper --zoom ~/media/pix/USA.JPG
+xset b off &
+xcompmgr &
+~/.local/bin/bar &
+xset r rate 300 45 &
+setxkbmap -option caps:escape
+# syncthing &
