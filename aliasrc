@@ -1,16 +1,16 @@
 #!/bin/sh
 # Installation aliases
-alias xi="sudo pacman -S"
-alias xr="sudo pacman -Suy"
+alias xi="sudo xbps-install"
+alias xr="sudo xbps-remove -o"
 
 # power aliases
-alias pow="poweroff"
-alias reb="reboot"
+alias pow="sudo poweroff"
+alias reb="sudo reboot"
+alias zzz="sudo zzz"
 alias asdf="startx"
 
 # file aliases
 alias ls="ls --color"
-alias ls-="ls"
 alias la="ls -A --color"
 alias ll="ls -lA -h --color"
 alias wl="ls -A --color | wc -l"
@@ -21,7 +21,7 @@ alias lb="cd ~/.local/bin"
 alias tx="cp $HOME/dox/sample.tex" # personal file/script, see other repository
 alias xl="xelatex"
 alias pl="pdflatex"
-alias pkg="nvim $HOME/dox/etc/pkg" # package count tracker
+#alias pkg="nvim $HOME/dox/etc/pkg" # package count tracker
 alias texclean="rm *.aux *.fdb_latexmk *.fls *.log *.synctex.gz" # gets rid of unessential LaTeX compilation files
 
 # Programs
@@ -32,7 +32,7 @@ alias z="setsid zathura"
 alias m="mpv"
 alias pm="pulsemixer"
 alias moc="mocp -O MOCDir=\"~/.config\"/moc"
-alias cc="calcurse" # unused
+#alias cc="calcurse" # unused
 
 # conveniency aliases
 alias mus="cd $HOME/dox/media/mus/"

@@ -25,6 +25,7 @@ set incsearch
 set scrolloff=4
 set signcolumn=yes
 set conceallevel=1
+set mouse=
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
@@ -35,18 +36,23 @@ nnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
 autocmd FileType html inoremap ;b <strong></strong><Space><++><Esc>FsT>i
 autocmd FileType html inoremap ;p <p></p><Enter><++><Esc>2ki
-autocmd FileType html inoremap ;h1 <h1></h1><Enter><++><Esc>2kli
-autocmd FileType html inoremap ;h2 <h2></h2><Enter><++><Esc>2kli
-autocmd FileType html inoremap ;h3 <h3></h3><Enter><++><Esc>2kli
+autocmd FileType html inoremap ;h1 <h1></h1><Enter><++><Esc>kli
+autocmd FileType html inoremap ;h2 <h2></h2><Enter><++><Esc>kli
+autocmd FileType html inoremap ;h3 <h3></h3><Enter><++><Esc>kli
 
 autocmd FileType tex inoremap ;i \emph{}<Space><++><Esc>F{a
 autocmd FileType tex inoremap ;it \item{}<Enter><++><Esc>?{<Enter>a
+autocmd FileType tex inoremap ;bit \begin{itemize}<Enter>\item{}<Enter><++><Enter>\end{itemize}<Esc>?}<Enter>i
+autocmd FileType tex inoremap ;ben \begin{enumerate}<Enter>\item{}<Enter><++><Enter>\end{enumerate}<Esc>?}<Enter>i
+autocmd FileType tex inoremap ;tab \begin{tabular}{}<Enter><++><Enter>\end{tabular}<Esc>?}<Enter>i
+autocmd FileType tex inoremap ;center \begin{center}<Enter><Enter>\end{center}<Esc>ki
 autocmd FileType tex inoremap ;b \textbf{}<Space><++><Esc>F{a
 autocmd FileType tex inoremap ;u \underline{}<Space><++><Esc>F{a
 autocmd FileType tex inoremap ;h1 \section{}<Enter><Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;h2 \subsection{}<Enter><Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;h3 \subsubsection{}<Enter><Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;beg \begin{}<Space><Enter><Enter>\end{<++>}<Esc>?}<Enter>i
+autocmd FileType tex inoremap --> $\rightarrow$<Space>
 
 " nnoremap <C-l> :!pdflatex *.tex<CR>
 " nav
@@ -55,12 +61,13 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"autocmd VimEnter * hi Normal ctermbg=none
+autocmd VimEnter * hi Normal ctermbg=none
 
 ":options for help
 
 " Other stuff
 colorscheme gruvbox
+" colorscheme blue
 
 " wtf
 "let g:vimtex_compiler_latexmk = { 
