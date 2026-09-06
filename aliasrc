@@ -2,11 +2,12 @@
 # Installation aliases
 alias xi="sudo xbps-install"
 alias xr="sudo xbps-remove -o"
+alias r="recaudio.sh"
 
 # power aliases
 alias pow="sudo poweroff"
 alias reb="sudo reboot"
-alias zzz="sudo zzz"
+#alias zzz="sudo zzz"
 alias asdf="startx"
 
 # file aliases
@@ -18,11 +19,17 @@ alias ..="cd .."
 alias lb="cd ~/.local/bin"
 
 # LaTeX aliases
-alias tx="cp $HOME/dox/sample.tex" # personal file/script, see other repository
+alias tx="cp $HOME/dox/new.tex" # personal file/script, see other repository
+alias txmat="cp $HOME/dox/sample-mat.tex" # personal file/script, see other repository
+alias mn="cat notes.tex || cp $HOME/dox/sample.tex notes.tex && nvim notes.tex || nvim notes.tex"
 alias xl="xelatex"
 alias pl="pdflatex"
-#alias pkg="nvim $HOME/dox/etc/pkg" # package count tracker
-alias texclean="rm *.aux *.fdb_latexmk *.fls *.log *.synctex.gz" # gets rid of unessential LaTeX compilation files
+alias pkg="nvim $HOME/dox/etc/pkg" # package count tracker
+alias texclean="rm *.aux & rm *.fdb_latexmk & rm *.fls & rm *.log & rm *.synctex.gz & rm *.toc" # gets rid of unessential LaTeX compilation files
+alias charcount="pdftotext main.pdf - | wc -m"
+
+# cpp
+alias gpp="g++"
 
 # Programs
 alias clock="tty-clock -S -s -c -C 6"
@@ -35,15 +42,20 @@ alias moc="mocp -O MOCDir=\"~/.config\"/moc"
 #alias cc="calcurse" # unused
 
 # conveniency aliases
-alias mus="cd $HOME/dox/media/mus/"
-alias pod="cd $HOME/dox/media/podcasts/"
-alias vids="cd $HOME/dox/media/videos/"
-alias yt="cd $HOME/dox/media/videos/yt/"
+alias mus="cd $HOME/media/music/"
+alias pod="cd $HOME/media/podcasts/"
+alias vids="cd $HOME/media/videos/"
+alias yt="cd $HOME/media/videos/yt/"
 alias www="cd $HOME/dox/www/"
 alias s="setsid -f"
 alias xreload="xrdb ~/.config/.Xresources"
 alias pv="pipe-viewer --resolution 480"
 alias zal="nvim $HOME/.config/zsh/aliasrc"
+alias kbus="setxkbmap us"
+alias kbusintl="setxkbmap -layout us -variant intl"
+alias yd="yt-dlp"
+alias kbr="setxkbmap -option caps:escape && xset r rate 300 45 && xmodmap .Xmodmap"
+alias inv='nvim $(fzf -m --preview "bat --color=always {}")'
 
 # make
 alias mci="sudo make clean install"
@@ -51,3 +63,8 @@ alias mi="sudo make install"
 
 # anti-retarded alias
 alias cal="cal --monday"
+
+# school
+alias sch="cd ~/dox/school/"
+
+alias ytmp3="yt-dlp --no-playlist --audio-format mp3 -x"

@@ -24,11 +24,16 @@ set ignorecase ""
 set incsearch
 set scrolloff=4
 set signcolumn=yes
-set conceallevel=1
+set conceallevel=2
 set mouse=
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+" autocmd VimEnter * hi Normal ctermbg=none
+autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
+" let gruvbox_transparent_bg = '1'
+colorscheme gruvbox
 
 nnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 
@@ -41,32 +46,43 @@ autocmd FileType html inoremap ;h2 <h2></h2><Enter><++><Esc>kli
 autocmd FileType html inoremap ;h3 <h3></h3><Enter><++><Esc>kli
 
 autocmd FileType tex inoremap ;i \emph{}<Space><++><Esc>F{a
-autocmd FileType tex inoremap ;it \item{}<Enter><++><Esc>?{<Enter>a
-autocmd FileType tex inoremap ;bit \begin{itemize}<Enter>\item{}<Enter><++><Enter>\end{itemize}<Esc>?}<Enter>i
-autocmd FileType tex inoremap ;ben \begin{enumerate}<Enter>\item{}<Enter><++><Enter>\end{enumerate}<Esc>?}<Enter>i
+autocmd FileType tex inoremap ;it \item <Enter><++><Esc>? <Enter>a
+autocmd FileType tex inoremap ;bit \begin{itemize}<Enter>\item <Enter><++><Enter>\end{itemize}<Esc>?m <Enter>A
+autocmd FileType tex inoremap ;ben \begin{enumerate}<Enter>\item <Enter><++><Enter>\end{enumerate}<Esc>?m <Enter>A
 autocmd FileType tex inoremap ;tab \begin{tabular}{}<Enter><++><Enter>\end{tabular}<Esc>?}<Enter>i
+autocmd FileType tex inoremap ;fig \begin{figure}[H]<Enter>\caption{<++>}<Enter><++><Enter>\end{figure}<Esc>kk$hvhhhc
 autocmd FileType tex inoremap ;center \begin{center}<Enter><Enter>\end{center}<Esc>ki
+autocmd FileType tex inoremap ;quoteit \textit{\begin{quote}<Enter><Enter>\end{quote}}<Esc>ki
+autocmd FileType tex inoremap ;quote \begin{quote}<Enter><Enter>\end{quote}<Esc>ki
+autocmd FileType tex inoremap ;ver \begin{Verbatim}<Enter><Enter>\end{Verbatim}<Esc>ki
 autocmd FileType tex inoremap ;b \textbf{}<Space><++><Esc>F{a
 autocmd FileType tex inoremap ;u \underline{}<Space><++><Esc>F{a
+"autocmd FileType tex inoremap ;u \un{}<Space><++><Esc>F{a
+autocmd FileType tex inoremap ;chap \chapter{}<Enter><Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;h1 \section{}<Enter><Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;h2 \subsection{}<Enter><Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;h3 \subsubsection{}<Enter><Enter><++><Esc>?{<Enter>a
 autocmd FileType tex inoremap ;beg \begin{}<Space><Enter><Enter>\end{<++>}<Esc>?}<Enter>i
+autocmd FileType tex inoremap <-- $\leftarrow$<Space>
 autocmd FileType tex inoremap --> $\rightarrow$<Space>
 
-" nnoremap <C-l> :!pdflatex *.tex<CR>
+autocmd FileType tex inoremap => \implies
+autocmd FileType tex inoremap <==> \iff
+"autocmd FileType tex inoremap ... \dots
+
+autocmd VimLeave *.tex :!texclean
+
+ nnoremap <C-l> :!pdflatex *.tex<CR>
 " nav
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-autocmd VimEnter * hi Normal ctermbg=none
 
 ":options for help
 
 " Other stuff
-colorscheme gruvbox
 " colorscheme blue
 
 " wtf

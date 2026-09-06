@@ -2,6 +2,11 @@ export EDITOR="nvim"
 export TERM="st"
 export VISUAL="nvim"
 
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export SDL_IM_MODULE="fcitx"
+export XMODIFIERS=@im="fcitx"
+
 # PS1 and enable colors
 autoload -U colors && colors
 # PS1="%B%{$fg[magenta]%}[%{$fg[blue]%}%n%{$fg[white]%}@%{$fg[blue]%}%M %{$fg[white]%}%~%{$fg[blue]%}]%{$reset_color%}$%b "
@@ -9,7 +14,7 @@ if [[ $(whoami) == "root" ]]; then
 	PS1="%B%{$fg[red]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%M %{$fg[white]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 else
 	#PS1="%B%{$fg[magenta]%}[%{$fg[magenta]%}%n%{$fg[white]%}@%{$fg[magenta]%}%M %{$fg[white]%}%~%{$fg[magenta]%}]%{$reset_color%}$%b "
-	PS1="%B%{$fg[blue]%}%n %{$fg[red]%}%~ %{$fg[white]%}>%b "
+	PS1="%B%{$fg[green]%}%n %{$fg[yellow]%}%~ %{$fg[white]%}>%b " # used to be blue
 fi
 
 # Put history in ~/.cache/ dir
@@ -66,4 +71,12 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new
 
 # Syntax highlighting
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+if [[ $(~/.local/bin/getterm) != "emacs" ]]; then
+	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+fi
+
+# Following line was automatically added by arttime installer
+export MANPATH=/home/jg/.local/share/man:$MANPATH
+
+# Following line was automatically added by arttime installer
+export PATH=/home/jg/.local/bin:$PATH
